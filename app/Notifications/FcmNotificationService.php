@@ -35,7 +35,7 @@ class FcmNotificationService
 
             $response = Http::withToken($authToken)->post($url, [
                 'message' => [
-                    'token' => $this->user->fcm_token,
+                    'token' => $this->user->fcm,
                     'data' => [
                         'title' => $this->title,
                         'body' => $this->body,
